@@ -1,15 +1,11 @@
 pipeline {
     agent any
-
     stages {
         
         stage('Welcome to master'){
             steps{
                 echo 'Start Program'
-                script {
-                   def data = readFile(file: 'test.txt')
-                   println(data)
-               }
+                readFile('test.txt')
             }
             
         }
@@ -17,7 +13,7 @@ pipeline {
         stage('Tigger the Slave Jobs') {
             steps {
                 echo 'Start Trigger to send name and age to slave'
-                build job: 'slave', parameters: [string(name: 'NAME', value: 'Alice'), string(name: 'Ages', value: '21')]
+                //build job: 'slave', parameters: [string(name: 'NAME', value: 'Alice'), string(name: 'Ages', value: '21')]
             }
         }
     }
