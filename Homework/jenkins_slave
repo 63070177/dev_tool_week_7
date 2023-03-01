@@ -1,14 +1,3 @@
-# your Home work
-# your Home work1.สร้างเรโป
-
-# 2.สร้าง 2 จ๊อบ
-# 3.มาสอ่านค่าในกิต
-# 4.สร้างไฟล์ 1 อัน ชื่อ อายุ
-# 5.มาสมาอ่านค่าในไฟล์ใหม่
-# 6.เรียกทาส คืนค่าให้ทาส ทาสรันไพธอน
-
-# ใช้เว็บฮุก
-
 pipeline {
     agent any
     parameters {
@@ -18,7 +7,7 @@ pipeline {
     stages {
         stage('Test Python') {
             steps {
-                sh 'python myscript.py ${params.NAME} ${params.Ages}'
+                sh 'python myscript.py ${params.NAME} --age ${params.Ages}'
             }
         }
     }
