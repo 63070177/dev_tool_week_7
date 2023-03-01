@@ -1,2 +1,2 @@
-Jenkins
-30
+GTHR
+21
