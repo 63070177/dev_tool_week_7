@@ -13,7 +13,7 @@ pipeline {
             steps {
                 echo 'Start Trigger to send name and age to slave'
                 script {
-                    def filePath = readFile(file: './Homework/test.txt')
+                    def filePath = readFile(file: 'test.txt')
                     def lines = filePath.readLines()
                     build job: 'homework_slave', parameters: [string(name: 'NAME', value: lines.get(0)), string(name: 'Ages', value: lines.get(1))]
                 }
