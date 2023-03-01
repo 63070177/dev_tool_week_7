@@ -5,7 +5,7 @@ pipeline {
         stage('Welcome to master'){
             steps{
                 echo 'Start Program'
-                readFile('test.txt')
+                readFile("${WORKSPACE}/test.txt")
             }
             
         }
