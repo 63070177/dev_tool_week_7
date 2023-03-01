@@ -6,7 +6,12 @@ pipeline {
         stage('Welcome to master'){
             steps{
                 echo 'Start Program'
+                script {
+                   def data = readFile(file: 'test.txt')
+                   println(data)
+               }
             }
+            
         }
 
         stage('Tigger the Slave Jobs') {
