@@ -1,8 +1,8 @@
 pipeline {
     agent any
     parameters {
-        string(name: 'NAME', defaultValue: '', description: 'Enter your name')
-        string(name: 'Ages', defualtValue: '', description: 'Enter your age')
+        string(name: 'NAME', defaultValue: 'AAA', description: 'Enter your name')
+        string(name: 'Ages', defualtValue: 'BBB', description: 'Enter your age')
     }
     stages {
         stage('Test Python') {
